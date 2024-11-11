@@ -1,7 +1,6 @@
 import { useState } from 'preact/hooks';
-import preactLogo from 'src/assets/preact.svg';
 
-import viteLogo from '/vite.svg';
+import brands from './brands';
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -9,21 +8,15 @@ export default function App() {
   return (
     <>
       <div className="flex justify-center">
-        <a href="https://vitejs.dev" target="_blank">
-          <img
-            src={viteLogo}
-            className="m-4 h-24 hover:drop-shadow-2xl"
-            alt="Vite logo"
-          />
-        </a>
-
-        <a href="https://preactjs.com" target="_blank">
-          <img
-            src={preactLogo}
-            className="m-4 h-24 hover:drop-shadow-2xl"
-            alt="Preact logo"
-          />
-        </a>
+        {brands.map(({ alt, href, src }) => (
+          <a href={href} rel="nofollow noopener" target="_blank">
+            <img
+              src={src}
+              className="m-4 h-24 hover:drop-shadow-2xl"
+              alt={alt}
+            />
+          </a>
+        ))}
       </div>
 
       <h1 className="my-10 text-5xl font-bold">Vite + Preact + Tailwind</h1>
@@ -45,7 +38,7 @@ export default function App() {
       </div>
 
       <p className="text-slate-400">
-        Click on the Vite and Preact logos to learn more
+        Click on the Vite, Preact, and Tailwind logos to learn more
       </p>
     </>
   );
