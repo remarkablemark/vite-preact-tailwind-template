@@ -34,9 +34,6 @@ export default defineConfig([
     },
 
     rules: {
-      '@typescript-eslint/no-extra-semi': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'off',
-      '@typescript-eslint/no-unused-vars': 'error',
       'no-console': 'error',
       'no-debugger': 'error',
       'prettier/prettier': 'error',
