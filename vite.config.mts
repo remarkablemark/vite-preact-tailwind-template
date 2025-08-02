@@ -3,7 +3,7 @@ import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
 /**
- * @see {@link https://vitejs.dev/config/}
+ * @see {@link https://vite.dev/config/}
  */
 export default defineConfig({
   base: process.env.BASE || '',
