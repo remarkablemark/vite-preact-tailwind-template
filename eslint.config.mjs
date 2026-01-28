@@ -15,7 +15,7 @@ export default defineConfig([
   includeIgnoreFile(gitignorePath),
 
   {
-    files: ['**/*.{js,mjs,cjs,ts,tsx,mts,cts}'],
+    files: ['**/*.{cjs,cts,js,jsx,mjs,mts,ts,tsx}'],
 
     plugins: {
       'simple-import-sort': simpleImportSort,
