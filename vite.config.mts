@@ -9,7 +9,7 @@ export default defineConfig({
   base: process.env.BASE || '',
   resolve: {
     alias: {
-      src: resolve(__dirname, 'src'),
+      src: resolve(import.meta.dirname, 'src'),
     },
   },
   plugins: [preact()],
